@@ -20,9 +20,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.get("/", (req, res) => {
-  res.send("backend is working successfully");
-});
 app.use('/api/auth',userRoutes);
 app.use('/api/products',productRoutes);
 app.use('/api/orders',orderRoutes);
